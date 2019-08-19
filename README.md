@@ -1,6 +1,6 @@
 # 100 Projects Challenge
 
-This project aims to expand my teorethical and practival knowledge of programming languages. Basic language used across all projects is Python but along with progress other will be included as well (e.g Javascript).
+This repository aims to expand my teorethical and practical knowledge of programming languages. Basic language used across all projects is Python but along with progress other will be included as well (e.g Javascript).
 
 The repository is created so that each folder corresponds to the project number and each subfolder correspond to the language in which they were written.
 
@@ -11,7 +11,7 @@ For Graphical User Interface will be using Tkinter.
 
 ## 100 Projects Complete List
 
-Below complete list of project to be completed. These are based on [Reddit](https://www.reddit.com/r/learnprogramming/comments/2a9ygh/1000_beginner_programming_projects_xpost/) topic and my own preferences.
+Below complete list of projects to be completed. These are based on [Reddit](https://www.reddit.com/r/learnprogramming/comments/2a9ygh/1000_beginner_programming_projects_xpost/) topic and my own preferences.
 
 ![alt text](https://github.com/MrDominikku/100_projects_challenge/blob/master/100_projects.jpg)
 
