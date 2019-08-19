@@ -1,5 +1,6 @@
 config_names = {
     '20th_cent_names': {
+        'display_name': '20th Century Names',
         'male_first': ['Aaron', 'Abraham', 'Adam', 'Adolph', 'Alan', 'Albert', 'Alex', 'Alexander', 'Alfred',
                        'Allan', 'Allen', 'Alton', 'Alvin', 'Amos', 'Andrew', 'Angelo', 'Anthony', 'Antonio',
                        'Archie', 'Arnold', 'Arthur', 'August', 'Ben', 'Benjamin', 'Bennie', 'Bernard', 'Bert',
