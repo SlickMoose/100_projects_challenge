@@ -141,3 +141,16 @@ class MyLabelFrame(LabelFrame):
     def set_settings(self):
 
         self['background'] = config_layout['dark_blue']
+
+
+class MyCanvas(Canvas):
+
+    def __init__(self, master, **kw):
+
+        Canvas.__init__(self, master=master, **kw)
+
+        self.set_settings()
+
+    def set_settings(self):
+
+        self['background'] = config_layout['dark_blue']
