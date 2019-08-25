@@ -24,4 +24,4 @@ Below complete list of projects to be completed. These are based on [Reddit](htt
 
 # 1. Name Generator
 
-![alt text](https://https://github.com/MrDominikku/100_projects_challenge/tree/master/1.%20Name%20Generator/Python/name_generator.JPG)
+![alt text](https://github.com/MrDominikku/100_projects_challenge/tree/master/1.%20Name%20Generator/Python/name_generator.JPG)
