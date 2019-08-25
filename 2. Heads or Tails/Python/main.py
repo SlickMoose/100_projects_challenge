@@ -1,4 +1,5 @@
 from Widgets.tk_widgets import *
+import random
 
 
 class NameGenerator(object):
@@ -38,6 +39,8 @@ class NameGenerator(object):
 
     def flip_coin(self, coin):
 
+        coin.repeat_count = 1
+        coin.repeat = random.randrange(5, 10)
         coin.update_coin()
 
 
@@ -50,30 +53,50 @@ class Coin:
         self.x2 = x2
         self.y2 = y2
 
+        self.repeat = 5
+        self.repeat_count = 1
+        self.interval = 5
+        self.flip = ['HEADS', 'TAILS']
+        self.flip_int = 1
+        self.width = 2
+        self.width_interval = 0.15
+
         self.fill = config_layout['pressed']
         self.outline = config_layout['light_gray']
 
         self.canvas = canvas
         self.coin = canvas.create_oval(self.x1, self.y1, self.x2, self.y2,
-                                       fill=self.fill, outline=self.outline, width=2)
+                                       fill=self.fill, outline=self.outline, width=self.width)
 
         self.heads_tails = canvas.create_text((self.x1+self.x2)*0.5, (self.y1+self.y2)*0.5,
                                               text='Flip the Coin!', font='Times 25 bold')
 
     def update_coin(self):
 
-        x1, y1, x2, y2 = self.canvas.coords(self.coin)
+        self.x1, self.y1, self.x2, self.y2 = self.canvas.coords(self.coin)
 
-        if y1 < 100:
-            y1 += 1
-            y2 -= 1
-            self.canvas.itemconfig(self.heads_tails, text='HEADS')
-        else:
-            y1 -= 1
-            y2 += 1
-            self.canvas.itemconfig(self.heads_tails, text='TAILS')
+        if self.y1 >= 110:
+            self.interval *= -1
+            self.flip_int = int(not self.flip_int)
+            self.width_interval *= -1
+            self.canvas.itemconfig(self.heads_tails, text=self.flip[self.flip_int])
 
-        self.canvas.coords(self.coin, x1, y1, x2, y2)
+        if self.y1 <= 20:
+            self.width_interval *= -1
+            self.interval *= -1
+            self.repeat_count += 1
+
+            if self.repeat_count == self.repeat:
+                self.canvas.after_cancel(None)
+
+        self.y1 += self.interval
+        self.y2 -= self.interval
+        self.width += self.width_interval
+
+        self.canvas.coords(self.coin, self.x1, self.y1, self.x2, self.y2)
+        self.canvas.itemconfig(self.coin, width=self.width)
+        self.canvas.after(20, self.update_coin)
+
 
 
 def main():
