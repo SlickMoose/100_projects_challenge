@@ -83,15 +83,26 @@ class MyRadioButton(Radiobutton):
 
         Radiobutton.__init__(self, master=master, **kw)
 
+        self.set_settings()
+
         self.defaultBackground = self['background']
 
-        self.bind("<Enter>", self.on_enter)
-        self.bind("<Leave>", self.on_leave)
+        self.bind('<Enter>', self.hover_on)
+        self.bind('<Leave>', self.hover_off)
 
-    def on_enter(self, e):
-        self['background'] = self['highlightcolor']
+    def set_settings(self):
+        self['activebackground'] = config_layout['pressed']
+        self['activeforeground'] = config_layout['dark_blue']
 
-    def on_leave(self, e):
+        self['selectcolor'] = config_layout['pressed']
+
+        self['background'] = config_layout['dark_blue']
+        self['foreground'] = config_layout['light_gray']
+
+    def hover_on(self, _):
+        self['background'] = config_layout['hover_on']
+
+    def hover_off(self, _):
         self['background'] = self.defaultBackground
 
 
@@ -103,10 +114,8 @@ class MyCombobox(ttk.Combobox):
 
         self.set_settings()
 
-        self.cb_value = StringVar()
-
         self['values'] = menu_values
-        self.current(0)
+        self['textvariable'] = menu_values[0]
 
         self.bind('<<ComboboxSelected>>', self.combobox_selected)
 
@@ -114,11 +123,11 @@ class MyCombobox(ttk.Combobox):
 
         self['justify'] = CENTER
         self['background'] = config_layout['dark_blue']
-        self['foreground'] = config_layout['light_gray']
+        self['foreground'] = config_layout['dark_blue']
 
     def combobox_selected(self, _):
 
-        self['textvariable'] = self.cb_value.get()
+        self['textvariable'] = self.get()
 
 
 class MyLabelFrame(LabelFrame):
