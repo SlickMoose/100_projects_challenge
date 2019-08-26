@@ -2,7 +2,7 @@ from Widgets.tk_widgets import *
 import random
 
 
-class NameGenerator(object):
+class HeadsTails:
 
     def __init__(self, master=None):
 
@@ -117,7 +117,7 @@ def main():
 
     root = Tk()
 
-    _ = NameGenerator(root)
+    _ = HeadsTails(root)
     root.mainloop()
 
 
