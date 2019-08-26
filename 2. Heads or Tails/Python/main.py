@@ -29,8 +29,7 @@ class HeadsTails:
         btn_frame = MyFrame(mainframe)
         btn_frame.pack(fill=BOTH)
 
-        btn_flip = MyButton(btn_frame, text='Flip the Coin!', width=30)
-        btn_flip.configure(command=lambda button=btn_flip: self.flip_coin(btn_flip))
+        btn_flip = MyButton(btn_frame, text='Flip the Coin!', command=self.flip_coin, width=30)
         btn_flip.pack(fill=BOTH)
 
         close_app = MyButton(btn_frame, text='Quit', command=self.master.destroy, width=30)
@@ -38,9 +37,9 @@ class HeadsTails:
 
         self.coin = Coin(canvas, btn_flip, 265, 250, 35, 20)
 
-    def flip_coin(self, btn_flip):
+    def flip_coin(self):
 
-        btn_flip.configure(state=DISABLED)
+        self.coin.btn_flip.configure(state=DISABLED)
 
         self.coin.canvas.coords(self.coin.coin,
                                 self.coin.default_x1, self.coin.default_y1, self.coin.default_x2, self.coin.default_y2)
