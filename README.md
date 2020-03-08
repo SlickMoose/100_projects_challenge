@@ -1,6 +1,6 @@
 # 100 Projects Challenge
 
-This repository aims to expand my teorethical and practical knowledge of programming languages. Basic language used across all projects is Python but along with progress other will be included as well (e.g Javascript).
+This repository aims to expand my teorethical and practical knowledge of programming languages. Basic language used across all projects is Python but along with progress other will be included as well (e.g Javascript, C++).
 
 The repository is created so that each folder corresponds to the project number and each subfolder correspond to the language in which they were written.
 
