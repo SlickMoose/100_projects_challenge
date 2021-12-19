@@ -1,4 +1,4 @@
-from Widgets.tk_widgets import *
+from tk_widgets import *
 import random
 
 
@@ -71,7 +71,7 @@ class Coin:
         self.interval = 10
         self.flip = ['HEADS', 'TAILS']
         self.flip_int = 1
-        self.outline_width = 2
+        self.outline_width = 0.5
         self.width_interval = 0.20
 
         self.fill = config_layout['pressed']
@@ -115,8 +115,7 @@ class Coin:
 def main():
 
     root = Tk()
-
-    _ = HeadsTails(root)
+    HeadsTails(root)
     root.mainloop()
 
 

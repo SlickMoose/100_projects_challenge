@@ -5,4 +5,3 @@ config_layout = {
     'hover_on': '#1464A0',
     'pressed': '#32414B'
 }
-

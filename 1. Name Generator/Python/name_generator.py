@@ -1,4 +1,4 @@
-from Widgets.tk_widgets import *
+from tk_widgets import *
 import random
 
 
@@ -55,7 +55,7 @@ class NameGenerator:
 
         #   btn_label - buttons
 
-        gen_label = MyLabel(btn_label, text='Select Name Category!')
+        gen_label = MyLabel(btn_label, text='Select Name Category:')
         gen_label.pack(fill=X)
 
         cat_var = StringVar()
@@ -125,8 +125,7 @@ class NameGenerator:
 def main():
 
     root = Tk()
-
-    _ = NameGenerator(root)
+    NameGenerator(root)
     root.mainloop()
 
 
