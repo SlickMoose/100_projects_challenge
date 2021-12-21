@@ -22,12 +22,20 @@ Below complete list of projects to be completed. These are based on [Reddit](htt
 
 # 1. Name Generator
 
+Python
 ![alt text](https://github.com/MrDominikku/100_projects_challenge/blob/master/1.%20Name%20Generator/Python/name_generator.JPG)
 
 # 2. Heads or Tails
 
+Python
 ![alt text](https://github.com/MrDominikku/100_projects_challenge/blob/master/2.%20Heads%20or%20Tails/Python/heads_or_tails.JPG)
 
 # 3. Temperature Converter
 
+Python
 ![alt text](https://github.com/MrDominikku/100_projects_challenge/blob/master/3.%20Temperature%20Converter/Python/temperature_converter.JPG)
+
+# 4. Calculate Age
+
+Python
+![alt text](https://github.com/MrDominikku/100_projects_challenge/blob/master/4.%20Calculate%20Age/Python/calculate_age.JPG)
